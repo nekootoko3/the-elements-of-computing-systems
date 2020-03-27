@@ -2,51 +2,36 @@
 D=A
 @SP
 M=D
-@300
-D=A
-@LCL
-M=D
-@400
-D=A
-@ARG
-M=D
-@3000
-D=A
-@THIS
-M=D
-@3010
-D=A
-@THAT
-M=D
 @17
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @17
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_0
 D;JEQ
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_0
 0;JMP
-(CMP_TRUE_0)
+(CMP_TRUE_0)  // true case
 @SP
 A=M-1
 M=-1
@@ -55,31 +40,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @16
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_1
 D;JEQ
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_1
 0;JMP
-(CMP_TRUE_1)
+(CMP_TRUE_1)  // true case
 @SP
 A=M-1
 M=-1
@@ -88,31 +74,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @17
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_2
 D;JEQ
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_2
 0;JMP
-(CMP_TRUE_2)
+(CMP_TRUE_2)  // true case
 @SP
 A=M-1
 M=-1
@@ -121,31 +108,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @891
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_3
 D;JLT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_3
 0;JMP
-(CMP_TRUE_3)
+(CMP_TRUE_3)  // true case
 @SP
 A=M-1
 M=-1
@@ -154,31 +142,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @892
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_4
 D;JLT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_4
 0;JMP
-(CMP_TRUE_4)
+(CMP_TRUE_4)  // true case
 @SP
 A=M-1
 M=-1
@@ -187,31 +176,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @891
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_5
 D;JLT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_5
 0;JMP
-(CMP_TRUE_5)
+(CMP_TRUE_5)  // true case
 @SP
 A=M-1
 M=-1
@@ -220,31 +210,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @32766
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_6
 D;JGT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_6
 0;JMP
-(CMP_TRUE_6)
+(CMP_TRUE_6)  // true case
 @SP
 A=M-1
 M=-1
@@ -253,31 +244,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @32767
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_7
 D;JGT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_7
 0;JMP
-(CMP_TRUE_7)
+(CMP_TRUE_7)  // true case
 @SP
 A=M-1
 M=-1
@@ -286,31 +278,32 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @32766
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
+M=M-1
+@SP
+A=M-1
 D=M-D
 @CMP_TRUE_8
 D;JGT
-@SP
+@SP // false case
 A=M-1
 M=0
 @CMP_END_8
 0;JMP
-(CMP_TRUE_8)
+(CMP_TRUE_8)  // true case
 @SP
 A=M-1
 M=-1
@@ -319,68 +312,75 @@ M=-1
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @31
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @53
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M+D // M <- Stack top operator D
+M=M-1
+@SP
+A=M-1
+M=M+D
 @112
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
-@SP
-A=M-1
-D=M    // D <- Stack Top
-@SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M-D // M <- Stack top operator D
-@SP
-A=M-1  // A <- SP-1
-M=-M // M <- [!|-]M
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M&D // M <- Stack top operator D
+M=M-1
+@SP
+A=M-1
+M=M-D
+@SP
+A=M-1
+M=-M
+@SP
+A=M-1
+D=M
+@SP
+M=M-1
+@SP
+A=M-1
+M=M&D
 @82
 D=A
 @SP
 A=M
-M=D   // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M|D // M <- Stack top operator D
+M=M-1
 @SP
-A=M-1  // A <- SP-1
-M=!M // M <- [!|-]M
+A=M-1
+M=M|D
+@SP
+A=M-1
+M=!M
+(END)
+@END
+0;JMP

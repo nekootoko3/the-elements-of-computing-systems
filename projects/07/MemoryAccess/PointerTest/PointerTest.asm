@@ -6,12 +6,12 @@ M=D
 D=A
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M // D <- pop value
+D=M
 @3
 M=D
 @SP
@@ -20,14 +20,13 @@ M=M-1
 D=A
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M // D <- pop value
-@3
-A=A+1
+D=M
+@4
 M=D
 @SP
 M=M-1
@@ -35,12 +34,12 @@ M=M-1
 D=A
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M // D <- pop value
+D=M
 @THIS
 A=M
 A=A+1
@@ -52,12 +51,12 @@ M=M-1
 D=A
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M // D <- pop value
+D=M
 @THAT
 A=M
 A=A+1
@@ -73,24 +72,24 @@ M=M-1
 D=M
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
-@3
-A=A+1
+M=M+1
+@4
 D=M
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M+D // M <- Stack top operator D
+M=M-1
+@SP
+A=M-1
+M=M+D
 @THIS
 A=M
 A=A+1
@@ -98,16 +97,17 @@ A=A+1
 D=M
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M-D // M <- Stack top operator D
+M=M-1
+@SP
+A=M-1
+M=M-D
 @THAT
 A=M
 A=A+1
@@ -119,16 +119,17 @@ A=A+1
 D=M
 @SP
 A=M
-M=D // StackTop <- D
+M=D
 @SP
-M=M+1 // SP++
+M=M+1
 @SP
 A=M-1
-D=M    // D <- Stack Top
+D=M
 @SP
-M=M-1  // SP--
-A=M-1  // A <- Stack top address
-M=M+D // M <- Stack top operator D
+M=M-1
+@SP
+A=M-1
+M=M+D
 (END)
 @END
 0;JMP
