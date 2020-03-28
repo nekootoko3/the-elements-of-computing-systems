@@ -1,0 +1,35 @@
+class Main {
+  function void main() {
+    var LinkList linkList;
+    var boolean exit;
+    var char key;
+    var char nodeKey;
+
+    let linkList = LinkList.new();
+
+    while (~exit) {
+      let key = Keyboard.readInt("enter integer(1-5): ");
+
+      if ((key = 1) | (key = 2)) { // append or isExist
+        let nodeKey = Keyboard.readInt("enter integer: ");
+
+        if (key = 1) {
+          do linkList.append(nodeKey);
+        } else {
+          do linkList.isExist(nodeKey);
+        }
+      }
+      if (key = 3) { // getLength
+        do linkList.getLength();
+      }
+      if (key = 4) { // printAll
+        do linkList.printAll();
+      }
+      if (key = 5) { // dispose and return
+        let exit = true;
+        do linkList.dispose();
+      }
+    }
+    return;
+  }
+}

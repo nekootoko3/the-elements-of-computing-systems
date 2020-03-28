@@ -1,0 +1,88 @@
+class LinkList {
+  field Node head;
+
+  constructor LinkList new() {
+    return this;
+  }
+
+  method void append(int key) {
+    var Node node;
+
+    if (head = null) {
+      let head = Node.new(key);
+    } else {
+      let node = head;
+      while (~(node.getNext() = null)) {
+        let node = node.getNext();
+      }
+      do node.setNext(Node.new(key));
+    }
+
+    return;
+  }
+
+  method void isExist(int key) {
+    var boolean is;
+    var Node node;
+
+    let is = false;
+    let node = head;
+    while (~(node = null)) {
+      if (key = node.getKey()) {
+        let is = true;
+      }
+      let node = node.getNext();
+    }
+
+    if (is) {
+      do Output.printString("True");
+    } else {
+      do Output.printString("False");
+    }
+    do Output.println();
+
+    return;
+  }
+
+  method void getLength() {
+    var int length;
+    var Node node;
+
+    let length = 0;
+    let node = head;
+    while (~(node = null)) {
+      let length = length + 1;
+      let node = node.getNext();
+    }
+
+    do Output.printInt(length);
+    do Output.println();
+
+    return;
+  }
+
+  method void printAll() {
+    var Node node;
+    let node = head;
+    while (~(node = null)) {
+      do Output.printInt(node.getKey());
+      let node = node.getNext();
+    }
+    do Output.println();
+    return;
+  }
+
+  method void dispose() {
+    var Node node;
+    var Node nextNode;
+
+    let node = head;
+    while (~(node = null)) {
+      let nextNode = node.getNext();
+      do Memory.deAlloc(node);
+      let node = nextNode;
+    }
+    do Memory.deAlloc(this);
+    return;
+  }
+}

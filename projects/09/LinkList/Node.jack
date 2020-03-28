@@ -1,0 +1,22 @@
+class Node {
+  field int key;
+  field Node next;
+
+  constructor Node new(int newKey) {
+    let key = newKey;
+    return this;
+  }
+
+  method Node getNext() {
+    return next;
+  }
+
+  method void setNext(Node nextNode) {
+    let next = nextNode;
+    return;
+  }
+
+  method int getKey() {
+    return key;
+  }
+}
