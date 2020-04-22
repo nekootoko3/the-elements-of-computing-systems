@@ -60,7 +60,9 @@ class String {
 
     /** Erases the last character from this string. */
     method void eraseLastChar() {
-        let last = last - 1;
+        if (last > 0) {
+            let last = last - 1;
+        }
         return;
     }
 
