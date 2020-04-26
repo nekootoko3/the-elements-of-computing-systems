@@ -42,6 +42,8 @@ pop that 0
 push constant 0
 return
 function Memory.alloc 4
+push constant 0
+pop local 1
 push static 2
 pop local 2
 push constant 0
